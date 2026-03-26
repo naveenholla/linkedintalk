@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn Speak Translator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">💼</span>
+        <h1>LinkedIn Speak</h1>
+      </div>
+      <p class="subtitle">Translate between plain English and corporate speak</p>
+    </header>
+
+    <div class="direction-toggle">
+      <button id="btn-human-to-linkedin" class="dir-btn active" data-direction="human-to-linkedin">
+        Human → LinkedIn
+      </button>
+      <button id="btn-linkedin-to-human" class="dir-btn" data-direction="linkedin-to-human">
+        LinkedIn → Human
+      </button>
+    </div>
+
+    <div class="input-section">
+      <label for="input-text" id="input-label">Your text</label>
+      <textarea
+        id="input-text"
+        placeholder="Type or paste text here..."
+        rows="5"
+        maxlength="2000"
+      ></textarea>
+      <div class="char-count"><span id="char-count">0</span> / 2000</div>
+    </div>
+
+    <button id="translate-btn" class="translate-btn" disabled>
+      <span id="btn-label">Translate</span>
+      <span id="btn-spinner" class="spinner hidden"></span>
+    </button>
+
+    <div class="output-section hidden" id="output-section">
+      <label>Result</label>
+      <div class="output-box" id="output-text"></div>
+      <button id="copy-btn" class="copy-btn">Copy</button>
+    </div>
+
+    <div class="error-box hidden" id="error-box"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
